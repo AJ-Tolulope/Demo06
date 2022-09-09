@@ -1,0 +1,522 @@
+/* ========== css preference =========*/
+/* ========== ============== =========*/
+
+
+/* -------
+font 
+-------- */
+@import url('./fonts.css');
+
+
+
+/* ---------------- custom variables --------------*/
+:root{
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin : 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic : 'Livvic', cursive;
+
+}
+
+/* ================== general styling ============= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 600;
+    /* border: 1px solid #777; */
+    color: #222;
+    line-height: 1.5;
+    font-family: var(--Abel);
+}
+body{
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+h5{
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 30px;
+}
+img{
+    width: 100%;
+}
+.section{
+    width: 85%;
+    min-height: 100vh;
+    margin: 0 auto 200px;
+}
+/* ================== general styling ============= */
+
+
+/* ================== hero section ============= */
+
+header{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -50px;
+}
+
+.logo{
+    padding: 40px 40px 0px 0px;
+}
+.logo span a{
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.logo span a span{
+    font-size: 35px;
+    font-weight: 700;
+    color: #db1616;
+}
+.menu-btn{
+    display: none;
+}
+.close{
+    display: none;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+nav ul li{
+    padding: 40px;
+    width: 13vw;
+}
+nav ul li a:hover{
+    font-weight: 500;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: space-between;
+}
+.hero-content .content{
+    width: 65%;
+}
+.hero-content .content h1{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: bold;
+    position: relative;
+}
+.hero-content .content h1:after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 25%;
+    left: 0;
+    bottom: 0;
+    background: #db1616;
+}
+.hero-content .hero-img{
+    width: 33%;
+}
+
+.hero-content .hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+}
+.hero-content .cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    flex: 0 0 48%;
+}
+.hero-content .cards .card-1,
+.hero-content .cards .card-2{
+    padding: 30px;
+    width: 48%;
+    background: white;
+    border-radius: 16px;
+}
+
+
+
+/* ================== hero section coloring============= */
+
+.hero-section header nav .home{
+    background: rgb(255, 140, 255);
+}
+.hero-section header nav .about{
+    background: rgb(140, 140, 255);
+}
+.hero-section header nav .marketing{
+    background: rgb(140, 255, 140);
+}
+.hero-section header nav .join{
+    background: rgb(255, 222, 140);
+}
+/* ================== hero section coloring close ============= */
+
+
+/* ================== hero section close ============= */
+
+
+
+
+
+
+/* ================== about section ============= */
+
+.about-section .about-content .about-content-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.about-section .about-content .about-content-container .content,
+.about-section .about-content .about-content-container .content-img{
+    width: 49%;
+    position: relative;
+}
+.about-section .about-content .about-content-container .content-img img{
+    border-radius: 16px;
+}
+.about-section .about-content .about-content-container .content-img:after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 35%;
+    left: 0;
+    bottom: 0;
+    background: #db1616;
+}
+.about-section .about-content .about-content-container .content p{
+    line-height: 2;
+}
+.about-section .about-content .about-content-container .content .btn{
+    margin-top: 50px;
+    padding: 10px;
+    color: #111;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    background: rgb(245, 234, 184);
+    display: inline-block;
+    transition: .7s ease;
+    cursor: pointer;
+}
+.about-section .about-content .about-content-container .content .btn:hover{
+    background: #db1616;
+}
+.about-section .about-content .content h3 span i{
+    font-size: 35px;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.about-section .about-content .cards{
+    display: flex;
+    justify-content: space-between;
+    justify-items: flex-start;
+    margin-top: 30px;
+}
+
+.about-section .about-content .cards{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 100px 0;
+    position: relative;
+}
+.about-section .about-content .cards:nth-child(2) .card-about:after,
+.about-section .about-content .cards:nth-child(3) .card-about:after{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 30%;
+    left: 0;
+    bottom: 0;
+    background: #db1616;
+}
+.about-section .about-content .cards .card-about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33%;
+    padding: 0 30px;
+    margin: 30px 0px;
+}
+.about-section .about-content .cards .card-about h3{
+    width: 45%;
+}
+.about-section .about-content .cards .card-about i{
+    font-size: 70px;
+    transition: .7s ease;
+}
+.about-section .about-content .cards .card-about i:hover{
+    color: rgb(116, 255, 116);
+}
+
+
+/* ================== about section close ============= */
+
+
+
+
+
+
+/* ========================== footer section =================== */
+
+footer{
+    width: 100%;
+    height: 20vh;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: #fff;
+}
+/* ========================== footer section close =================== */
+
+
+
+
+
+/* ================== backgroundcolor ============= */
+.water-mark .container{
+    width: 450px;
+    height: 450px;
+    border: 5px dotted #999;    
+    background: transparent;
+    position: absolute;
+    left: -15%;
+    top: 50%;
+    transform: translateY(-50%);    
+    border-radius: 32px;
+    z-index: -1;
+}
+.water-mark .mark{
+    width: 100%;
+    height: 100%;
+    background: rgb(140, 199, 255);
+    border: 5px dotted #999;
+    border-radius: 32px;
+    transform: rotate(45deg);
+}
+
+.backgroundcolor-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgb(255, 248, 228);
+    z-index: -2;
+}
+.backgroundcolor-2{
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background: rgb(255, 235, 183);
+    z-index: -2;
+}
+/* ================== backgroundcolor ============= */
+
+
+
+
+
+
+
+@media only screen and (max-width: 786px){
+
+    header{
+        width: 100%;
+        height: 7vh;
+        margin-bottom: 100px;
+        padding: 20px 0px;
+        align-items: center;
+        border-bottom: 1px solid #777;
+    }
+
+    .logo span{
+        font-size: 30px;
+    
+    }
+    .logo{
+        padding: 0;
+    }
+
+    nav{
+        display: block;
+    }
+    .close{
+        display: block;
+        text-align: right;
+    }
+    .close i{
+        font-size: 25px;
+        transition: .7s ease;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 55%;
+        height: 100vh;
+        padding: 15px 40px;
+        display: block;
+        background: rgb(247, 221, 173);
+        transition: .7s ease-in;
+        z-index: 999;
+    }
+    nav ul.open{
+        right: 0;
+    }
+
+    nav ul li{
+        display: block;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li a{
+        transition: .4s ease;
+    }
+    nav ul li:hover a{
+        font-weight: bolder;
+    }
+
+    .hero-section header nav .home{
+        margin-top: 100px;
+    }
+
+    .hero-section header nav .home,
+    .hero-section header nav .about,
+    .hero-section header nav .marketing,
+    .hero-section header nav .join{
+        background: none;
+    }
+
+
+    .menu-btn{
+        display: block;
+        font-size: 25px;
+    }
+    .menu-btn i{
+        font-size: 30px;
+        transition: .7s ease;
+    }
+    .menu-btn i:hover,
+    .close i:hover{
+        transform: scale(1.2);
+    }
+
+
+    .hero-content{
+        flex-direction: column;
+    }
+    .hero-content .content{
+        width: 100%;
+    }
+
+    .hero-content .content h1{
+        line-height: 1.3;
+    }
+
+    .hero-content .hero-img{
+        width: 100%;
+        height: 20vh;
+        border-right: 3px double #777;
+        border-left: 3px double #777;
+        margin: 15px 0px;
+    }
+
+    .hero-content .hero-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .hero-content .cards{
+        flex-direction: column;
+        margin: 40px 0px 40px;
+    }
+    .hero-content .cards .card-1,
+    .hero-content .cards .card-2{
+        padding: 20px;
+        margin-top: 30px;
+        width: 100%;
+        border-radius: 12px;
+        position: relative;
+        transition: .7s ease;
+    }
+    .hero-content .cards .card-1:hover,
+    .hero-content .cards .card-2:hover{
+        box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.12);
+    }
+    .hero-content .cards .card-1::before,
+    .hero-content .cards .card-2::before{
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        width: 50px;
+        height: 50px;
+        background: yellow;
+        border: 1px solid #777;
+    }
+
+    .about-section .about-content .about-content-container{
+        flex-direction: column-reverse;
+    }
+    
+    .about-section .about-content .about-content-container .content,
+    .about-section .about-content .about-content-container .content-img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .about-section .about-content .about-content-container .content p{
+        line-height: 1.5;
+    }
+
+    .about-section .about-content .content h3{
+        max-width: 250px;
+    }
+
+    .about-section .about-content .cards{
+        margin: 30px 0px;
+    }
+    
+    .about-section .about-content .cards .card-about{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #777;
+    }
+
+
+    .water-mark .container{
+        left: -30%;
+        top: 40%;
+    }
+}
