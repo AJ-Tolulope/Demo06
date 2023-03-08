@@ -1,0 +1,645 @@
+:root{
+    --m-color: #ffb53e;
+    --lightgray: #f5f5f5;
+    --color: #202020;
+    --l-color: #333333;
+    --w-color: #fdfdfd;
+    --bg-brown: #271407;
+    --border: 1px solid #ccc;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    /* border: var(--border); */
+}
+
+
+body{
+    color: var(--l-color);
+    line-height: 1.4;
+    font-family: 'Tilt Neon', Arial,  sans-serif;
+    overflow-x: hidden;
+}
+
+.btn{
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    text-transform: capitalize;
+    border-top-left-radius: 10px;
+    background-color: var(--m-color);
+    color: var(--color);
+    font-weight: 600;
+}
+.btn:hover{
+    text-decoration: underline;
+}
+a.read-more{
+    color: var(--color);
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+    display: inline-block;
+    letter-spacing: 3px;
+    font-size: 14px;
+
+    position: relative;
+}
+a.read-more::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--color);
+    bottom: -2px;
+    left: 0px;
+    transition: .4s;
+}
+a.read-more:hover::after{
+    bottom: -5px;
+}
+h1,h2,h3{
+    text-transform: capitalize;
+    color: var(--color);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+h1{
+    font-size: 6.5rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+.grid{
+    display: grid;
+}
+.grid-col-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-col-3{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-col-4{
+    grid-template-columns: repeat(4,1fr);
+}
+
+img{
+    width: 100%;
+}
+
+.logo a{
+    color: #202020;
+    font-size: 2rem;
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+section{
+    padding: 7rem 0;
+    border-bottom: var(--border);
+}
+
+
+/* =============================
+HEADER SECTION====================
+==============================*/
+
+header{
+    background: var(--lightgray);
+    padding-bottom: 2.8rem;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: var(--border);
+}
+
+header .container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+header .container ul li a{
+    text-transform: capitalize;
+    color: var(--color);
+}
+header .container .search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-top-left-radius: 10px;
+    padding: .8rem;
+    gap: 1rem;
+}
+header .container .search input{
+    color: var(--color);
+    width: fit-content;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+
+/* =============================
+HERO SECTION====================
+==============================*/
+
+section.hero{
+    background: var(--lightgray);
+    padding: 3rem 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+section.hero .container{
+    align-items: center;
+    gap: 5rem;
+}
+section.hero .hero-content{
+    position: relative;
+}
+section.hero .container .hero-content h1 span{
+    position: relative;
+    z-index: 1;
+}
+section.hero .container .hero-content h1 span::after{
+    position: absolute;
+    content: '';
+    bottom: .5rem;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background-color: var(--m-color);
+    z-index: -1;
+}
+section.hero .container .hero-content p{
+    margin: 1.8rem 0;
+}
+section.hero .hero-content .arrow-3{
+    bottom: -20%;
+    left: 0;
+}
+
+section.hero .hero-col-2 .swiper-slide{
+    border: var(--border);
+    border-top-left-radius: 16px;
+}
+section.hero .hero-col-2 .swiper-slide img{
+    height: 65vh;
+    object-fit: contain;
+}
+section.hero .hero-col-2{
+    position: relative;
+    overflow: hidden;
+    border-bottom: var(--border);
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+section.hero .hero-col-2::after{
+    position: absolute;
+    content: '';
+    bottom: 7%;
+    left: 50%;
+    width: 50%;
+    height: 7%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(rgba(0,0,0,.2), rgba(255, 255, 255, 0));
+    z-index: -1;
+}
+
+
+
+section.hero .arrow-1,
+section.hero .arrow-2,
+section.hero .arrow-3{
+    position: absolute;
+    width: 100px;
+    z-index: 10;
+}
+section.hero .hero-col-2 .arrow-1{
+    top: 20px;
+    left: 15px;
+    animation: point1 1.5s ease-in-out infinite;
+}
+section.hero .hero-col-2 .arrow-2{
+    bottom: 5px;
+    right: 5px;
+    animation: point2 1.2s ease-in-out infinite;
+}
+@keyframes point1{
+    0%,100%{
+        transform: translate(0,0) rotate(-10deg);
+    }
+    50%{
+        transform: translate(-30px,-30px) rotate(-10deg);
+    } 
+}
+@keyframes point2{
+    0%,100%{
+        transform: translate(0,0) rotate(150deg);
+    }
+    50%{
+        transform: translate(-30px,-30px) rotate(150deg);
+    } 
+}
+
+
+
+
+/* =============================
+FEATURE SECTION====================
+==============================*/
+section.feature .features{
+    overflow: hidden;
+}
+section.feature .features .feature-img{
+    border: 15px solid var(--bg-brown);
+    overflow: hidden;
+    position: relative;
+}
+section.feature .features .feature-img::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    opacity: .4;
+    top: 5%;
+    left: 5%;
+    animation: rotate 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    z-index: 1;
+}
+section.feature .features:nth-child(2) .feature-img::after{
+    left: 80%;
+    animation-delay: .5S;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+section.feature .features .feature-img img{
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+    animation: zoom 7s infinite;
+}
+section.feature .features:nth-child(2) .feature-img img{
+    animation-delay: 1s;
+}
+@keyframes zoom{
+    50%{
+        transform: scale(1.2);
+    }
+}
+section.feature .features .feature-content{
+    padding: 5rem;
+    background-color: var(--bg-brown);
+    color: var(--w-color);
+}
+section.feature .features .feature-content h3{
+    color: var(--w-color);
+}
+section.feature .features .feature-content p{
+    margin: 1.8rem 0 1rem;
+}
+section.feature .features .feature-content a.read-more{
+    color: var(--w-color);
+}
+section.feature .features .feature-content a.read-more::after{
+    background-color: var(--w-color);
+}
+
+
+
+
+/* =============================
+PRODUCT SECTION====================
+==============================*/
+section.product{
+    position: relative;
+}
+section.product .arrow-1{
+    position: absolute;
+    width: 100px;
+}
+section.product .section-description{
+    margin: 1.8rem 0;
+    width: 50%;
+}
+section.product .cart-items{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.8rem;
+}
+section.product .cart-items span{
+    text-transform: capitalize;
+    color: var(--color);
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+
+    position: relative;
+}
+section.product .cart-items span::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--color);
+    bottom: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: .4s;
+}
+section.product .cart-items span.active::after{
+    opacity: 1;
+    bottom: -5px;
+}
+section.product .cart-items span:not(.active):hover::after{
+    opacity: 1;
+    bottom: -5px;
+}
+section.product .shop-cards{
+    gap: 3rem;
+    text-align: center;
+}
+section.product .card-img {
+    background: var(--lightgray);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    height: 340px;
+    overflow: hidden;
+
+    position: relative;
+}
+section.product .card-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: .4s;
+}
+section.product .card-img img:hover{
+    transform: scale(1.15);
+}
+section.product .card-img i{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .4s;
+}
+section.product .card-img i:hover{
+    color: #ff2a2a;
+}
+
+section.product .card-details p{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+section.product .card-details span{
+    color: var(--m-color);
+    font-weight: 600;
+}
+section.product .go-shop{
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* =============================
+TESTIMONIALS SECTION============
+==============================*/
+section.testimonials h2{
+    text-align: center;
+}
+section.testimonials .testi-cards{
+    gap: 3rem;
+    margin-top: 8rem;
+}
+section.testimonials .testi-card{
+    text-align: center;
+    padding: 3.5rem 1rem 1.5rem;
+    border-radius: 10px;
+    border: var(--border);
+    background: var(--lightgray);
+
+    position: relative;
+}
+section.testimonials .testi-card .testi-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+section.testimonials .testi-card .testi-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+section.testimonials .testi-card .testi-img i{
+    font-size: 50px;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
+section.testimonials .rating{
+    margin: .5rem 0;
+}
+section.testimonials .rating i{
+    color: var(--m-color);
+} 
+section.testimonials .testi-card h4{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+section.testimonials .testi-card .test-work{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+
+
+/* =============================
+ORDER SECTION====================
+==============================*/
+section.order .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.order .container .cta a.secondary{
+    background: transparent;
+    border: var(--border);
+    margin-left: 1rem;
+}
+
+
+
+/* =============================
+FOOTER SECTION====================
+==============================*/
+footer{
+    padding: 4rem 0;
+}
+footer .container{
+    gap: 5rem;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    border-bottom: var(--border);
+}
+footer .container .describtion p{
+    margin: 1rem 0;
+}
+footer .container .describtion p:nth-child(3){
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+}
+footer .container .describtion .socials i{
+    margin-right: .5rem;
+    padding: .5rem;
+    border: var(--border);
+    cursor: pointer;
+    transition: .4s;
+}
+footer .container .describtion .socials i:hover{
+    background-color: var(--m-color);
+}
+footer .container div:not(.describtion) h4{
+    text-transform: capitalize;
+}
+footer .container div:not(.describtion) a{
+    display: block;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    color: #333333;
+}
+footer .container div:not(.describtion) a:hover{
+    color: #000;
+}
+footer .copyright{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+
+
+
+@media screen and (max-width:920px){
+    h1{
+        font-size: 3.5rem;
+    }
+
+    section.hero .container{
+        gap: 2rem;
+    }
+}
+
+
+
+@media screen and (max-width:786px){
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+
+    .logo a{
+        font-size: 1.2rem;
+    }
+    .grid-col-2,
+    .grid-col-3,
+    .grid-col-4{
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        width: 85%;
+    }
+
+    section{
+        height: auto;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    section.hero{
+        height: auto;
+    }
+    section.hero .container{
+        gap: 5rem;
+    }
+    section.hero .container .hero-content h1 span::after{
+        height: .8rem;
+        bottom: .2rem;
+    }
+
+    section.hero .hero-content .arrow-3{
+        width: 60px;
+    }
+
+    section.feature .features .feature-content{
+        padding: 2rem;
+    }
+
+    section.product .section-description{
+        margin: 1.8rem 0;
+        width: 100%;
+    }
+    section.product .arrow-1{
+        top: 20px;
+        width: 70px;
+    }
+
+
+    section.testimonials .testi-cards{
+        gap: 6rem;
+    }
+
+
+    section.order .container{
+        flex-direction: column;
+    }
+
+    footer .container{
+        gap: 3rem;
+    }
+
+}
+
+
+
+
